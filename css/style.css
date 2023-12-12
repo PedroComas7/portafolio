@@ -359,19 +359,81 @@ section.seccion.about {
     margin: 1rem;
 }
 
-@media(min-width: 700px) {
+    @media(min-width: 700px) {
 
-    .contact-wrapper {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+        .contact-wrapper > * {
+            padding: 2em;
+        }
+        .contact-info h4,
+        .contact-info ul,
+        .contact-info p {
+            text-align: left;
+        }
     }
-    .contact-wrapper > * {
-        padding: 2em;
+@media only screen and (max-width: 700px) {
+    body {
+        font-size: 14px;
     }
-    .contact-info h4,
-    .contact-info ul,
-    .contact-info p {
-        text-align: left;
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header .ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header .li {
+        margin: 1em 0;
+    }
+
+    #inicio {
+        padding: 2px;
+    }
+
+    .seccion .h2 {
+        font-size: 3.5em;
+    }
+
+    .seccion .h3 {
+        font-size: 4em;
+    }
+
+    .seccion .ul .a {
+        padding: 0.8em;
+    }
+
+    .seccion .grid {
+        grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+    }
+
+    .seccion .article {
+        min-height: 15vh;
+    }
+
+    .seccion .h4 {
+        font-size: 1.5em;
+    }
+
+    section.seccion.about {
+        padding: 50px; 
+    }
+
+    .about .p {
+        font-size: 1em; 
+    }
+
+    .contact {
+        padding: 100px; 
+    }
+
+    .contact-form form {
+        grid-template-columns: 1fr;
     }
 }
 .footer{
